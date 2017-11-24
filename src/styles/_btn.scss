@@ -1,0 +1,15 @@
+.btn {
+  padding: 0.5rem 1.15rem;
+  margin: 1rem 0.35rem;
+  text-decoration: none !important;
+  border: none;
+
+  &--wide {
+    display: block;
+    width: 80%;
+  }
+  &--full-width {
+    display: block;
+    width: 100%;
+  }
+}

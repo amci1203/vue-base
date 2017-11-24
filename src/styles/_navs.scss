@@ -1,0 +1,21 @@
+@import 'base/colors';
+
+// shared between primary & mobile navs
+$nav-color: white;
+$nav-text: $brand-primary;
+$mobile-menu-open-color: white;
+$mobile-menu-open-text: $brand-primary;
+
+.nav {
+    background: $nav-color;
+    color: $nav-text;
+    padding: 0 1.15rem;
+
+    display: flex;
+
+    ul { margin: 0 }
+
+    li {
+        list-style-type: none;
+    }
+}

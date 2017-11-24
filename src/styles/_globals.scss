@@ -1,0 +1,20 @@
+@import 'base/media';
+@import 'base/colors';
+@import 'base/positions';
+@import 'base/display';
+@import 'base/row';
+
+@import 'btn';
+@import 'cards';
+
+.text {
+  &-left { text-align: left !important }
+  &-center { text-align: center !important }
+  &-right { text-align: right !important }
+}
+
+.heading {
+  @include media(below-md) {
+    text-align: center;
+  }
+}

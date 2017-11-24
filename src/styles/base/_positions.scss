@@ -1,0 +1,40 @@
+@mixin v-center {
+  position  : absolute;
+  top       : 50%;
+  transform : translateY(-50%)
+}
+@mixin vf-center {
+  position  : fixed;
+  top       : 50%;
+  transform : translateY(-50%)
+}
+
+@mixin h-center {
+  position  : absolute;
+  left      : 50%;
+  transform : translateX(-50%)
+}
+@mixin hf-center {
+  position  : fixed;
+  left      : 50%;
+  transform : translateX(-50%)
+}
+
+@mixin dead-center {
+  position  : absolute;
+  top       : 50%;
+  left      : 50%;
+  transform : translate(-50%, -50%);
+}
+@mixin dead-f-center {
+  position  : fixed;
+  top       : 50%;
+  left      : 50%;
+  transform : translate(-50%, -50%);
+}
+
+@mixin center-block {
+  display: block;
+  margin-left  : auto;
+  margin-right : auto;
+}

@@ -1,0 +1,52 @@
+@mixin media ($rule, $only: false) {
+  $sm: 480px;
+  $md: 768px;
+  $lg: 991px;
+  $xl: 1236px;
+
+  @if $rule == xs {
+      @media only screen and (max-width: ($sm - 1)) { @content }
+  };
+
+  @if $rule == sm {
+    @if $only {
+      @media only screen and (min-width: $sm) and (max-width: ($md - 1)) { @content }
+    };
+    @media only screen and (min-width: $sm) { @content }
+  };
+
+  @if $rule == md {
+    @if $only {
+      @media only screen and (min-width: $md) and (max-width: ($lg - 1)) { @content }
+    };
+    @media only screen and (min-width: $md) { @content }
+  };
+
+  @if $rule == below-md {
+    @media only screen and (max-width: ($md - 1)) { @content }
+  };
+
+  @if $rule == lg {
+    @if $only {
+      @media only screen and (min-width: $lg) and (max-width: ($xl - 1)) { @content }
+    };
+    @media only screen and (min-width: $lg) { @content }
+  };
+
+  @if $rule == below-lg {
+    @media only screen and (max-width: ($lg - 1)) { @content }
+  };
+
+  @if $rule == xl {
+    @media only screen and (min-width: ($xl)) { @content }
+  };
+
+  @if $rule == below-xl {
+    @media only screen and (max-width: ($xl - 1)) { @content }
+  }
+};
+
+@mixin no-text-decoration () {
+  color: inherit;
+  text-decoration: none !important;
+}
